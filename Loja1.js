@@ -1,5 +1,21 @@
 //Loja 1   
-var inputwelcomeprompt = prompt("Hello, welcome! :D\nType the number of the desired action.\nPlease don't type random shit.\n1. Receive basic items;\n2. Check inventory\n3. Check stats\n4. Co-co-coming soooon\n5. cOMinG SoOn");
+var welcome = "Hello, welcome! :D<br><br>Type the number of the desired action. Please don't type random shit.<br><br>1. Receive basic items;<br>2. Check inventory<br>3. Check stats<br>4. Co-co-coming soooon<br>5. cOMinG SoOn<br><br>"
+document.getElementById("p1").innerHTML = welcome;
+var inputwlcm = document.createElement("input")
+inputwlcm.setAttribute("id","inputwlcm")
+inputwlcm.setAttribute("type","text")
+p1.appendChild(inputwlcm)
+
+// consertar este codigo, ta dando uns erros loucos; receber o input do textbox e tal...
+const label1 = document.createElement("label1")
+label1.setAttribute("for", "inputwlcm")
+label1.innetHTML = "Seu input"
+inputwlcm.insertBefore(inputwlcm, label1)
+
+//var p2 = document.createElement("p2")
+//var inputwlcm = document.createTextNode("<input type=\"text\" id=\"member\" name=\"member\" value=\"\">")
+//p2.appendChild(inputwlcm)
+//p1.appendChild(p2)
 
 var inventory = []
 var enemyhp = 100
@@ -48,21 +64,21 @@ var RustyArmor = new ArmorEquip ({
     decrease: 0.25
 })
 startmenu: while (true) {
-    if (inputwelcomeprompt >= 1 && inputwelcomeprompt <= 5){
-        switch(inputwelcomeprompt){
+    if (inputwlcm >= 1 && inputwlcm <= 5){
+        switch(inputwlcm){
         case "1":
             if (confirm("Do you want to receive your items?")) {
                 var inventory = [DentedSword, RustyArmor]
                 const ReceiveBasicItems = [DentedSword, RustyArmor]
                 alert("You received your basic items as below! Good luck with that shit.\n"+ ReceiveBasicItems.map((itemnames) => {return itemnames.name}) +"\nLet's go back to the beginning..")
-                inputwelcomeprompt = []
-                var inputwelcomeprompt = prompt("Hello, welcome! :D\nType the number of the desired action.\nPlease don't type random shit.\n1. Receive basic items;\n2. Check inventory\n3. Check stats\n4. Co-co-coming soooon\n5. cOMinG SoOn");
+                inputwlcm = []
+                var inputwlcm = prompt("Hello, welcome! :D\nType the number of the desired action.\nPlease don't type random shit.\n1. Receive basic items;\n2. Check inventory\n3. Check stats\n4. Co-co-coming soooon\n5. cOMinG SoOn");
                 continue startmenu;
                 break;
             } else {
                 alert("Who needs this shit anyway?")
-                inputwelcomeprompt = []
-                var inputwelcomeprompt = prompt("Hello, welcome! :D\nType the number of the desired action.\nPlease don't type random shit.\n1. Receive basic items;\n2. Check inventory\n3. Check stats\n4. Co-co-coming soooon\n5. cOMinG SoOn");
+                inputwlcm = []
+                var inputwlcm = prompt("Hello, welcome! :D\nType the number of the desired action.\nPlease don't type random shit.\n1. Receive basic items;\n2. Check inventory\n3. Check stats\n4. Co-co-coming soooon\n5. cOMinG SoOn");
                 continue startmenu;
             }
         break;
@@ -71,8 +87,8 @@ startmenu: while (true) {
         //break;
         default:
             alert("Coming soon!");
-            inputwelcomeprompt = []
-            var inputwelcomeprompt = prompt("Hello, welcome! :D\nType the number of the desired action.\nPlease don't type random shit.\n1. Receive basic items;\n2. Check inventory\n3. Check stats\n4. Co-co-coming soooon\n5. cOMinG SoOn");
+            inputwlcm = []
+            var inputwlcm = prompt("Hello, welcome! :D\nType the number of the desired action.\nPlease don't type random shit.\n1. Receive basic items;\n2. Check inventory\n3. Check stats\n4. Co-co-coming soooon\n5. cOMinG SoOn");
             continue startmenu;
         //case 3:
         //    alert("Coming soon!");
